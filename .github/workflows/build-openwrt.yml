@@ -91,13 +91,6 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
-    - name: SSH connection to Actions
-      uses: P3TERX/ssh2actions@v1.0.0
-      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-      env:
-        请不要发布这类群，谢谢_CHAT_ID: ${{ secrets.请不要发布这类群，谢谢_CHAT_ID }}
-        请不要发布这类群，谢谢_BOT_TOKEN: ${{ secrets.请不要发布这类群，谢谢_BOT_TOKEN }}
-
     - name: Download package
       id: package
       run: |
